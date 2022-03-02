@@ -5,4 +5,12 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="App02\BMIUNIT.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="App02\BMIUnit.cs" />
+  </ItemGroup>
+
 </Project>

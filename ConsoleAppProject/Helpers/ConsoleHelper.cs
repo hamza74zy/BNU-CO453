@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace ConsoleAppProject.Helpers
+
+
+namespace ConsoleAppProject
 {
 
     /// <summary>
@@ -11,7 +15,7 @@ namespace ConsoleAppProject.Helpers
     /// There are methods for outputting a main heading
     /// and a title.
     /// <author>
-    /// Derek Peacock 2021
+    /// Amir Hamza 2022
     /// </author>
     /// </summary>
     public static class ConsoleHelper
@@ -93,8 +97,8 @@ namespace ConsoleAppProject.Helpers
         /// </summary>
         public static double InputNumber(string prompt, double min, double max)
         {
-            bool isValid;
-            double number;
+            bool isValid = false;
+            double number = 0;
 
             do
             {
@@ -119,37 +123,25 @@ namespace ConsoleAppProject.Helpers
         /// inform the use which units are being converted
         /// Please change the authors name.
         /// </summary>
-        public static void OutputHeading(string heading)
+        public static void OutputHeading(string title)
         {
-            Console.ForegroundColor = ConsoleColor.Green;
-
-            Console.WriteLine("\n ---------------------------------");
-            Console.WriteLine($"    {heading}          ");
-            Console.WriteLine("     by Derek Peacock           ");
-            Console.WriteLine(" ---------------------------------" +
-                "\n");
-
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine();
+            Console.WriteLine("------------------------------------------------------------");
+            Console.WriteLine($"\t{title}    ");
+            Console.WriteLine("\tby Amir Hamza        ");
+            Console.WriteLine("------------------------------------------------------------\n");
         }
 
         /// <summary>
         /// This method will display a green title underlined
         /// by dashes.
         /// </summary>
-        public static void OutputTitle(string title)
+        public static void OutputTitle(string titles)
         {
-            Console.ForegroundColor = ConsoleColor.Green;
-
-            Console.WriteLine($"\n {title}");
-            Console.Write(" ");
-
-            for(int count = 0; count <= title.Length; count++)
-            {
-                Console.Write("-");
-            }
-
-            Console.WriteLine("\n");
-            Console.ResetColor();
+            Console.WriteLine("\t---------------------------------------------");
+            Console.WriteLine($"\t\t|{titles}|");
+            Console.WriteLine("\t---------------------------------------------\n");
         }
     }
-}
+    }
+
