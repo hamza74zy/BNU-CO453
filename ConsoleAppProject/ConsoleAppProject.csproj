@@ -6,11 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="App02\BMIUNIT.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="App02\BMIUnit.cs" />
+    <Compile Remove="App02\BMIUnit2.cs" />
   </ItemGroup>
 
 </Project>

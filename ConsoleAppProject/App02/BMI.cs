@@ -67,7 +67,8 @@ namespace ConsoleAppProject.App02
             int choiceNo = ConsoleHelper.SelectChoice(choices);
             return ExecuteChoice(choiceNo);
         }
-        /// <summary>
+        /// <summary>2
+        /// 
         /// Execute other method 
         /// based on user's chosen unit
         /// returns the metric unit
@@ -79,11 +80,11 @@ namespace ConsoleAppProject.App02
                 case 1:
                     InputMetricValue();
                     CalculateMetric();
-                    return BMIUnit.Metric;
+                    return (BMIUnit)BMIUnit.Metric;
                 case 2:
                     InputImperialValue();
                     CalculateImperial();
-                    return BMIUnit.Imperial;
+                    return (BMIUnit)BMIUnit.Imperial;
                 default:
                     return BMIUnit.NoUnit;
             }
@@ -183,12 +184,8 @@ namespace ConsoleAppProject.App02
             BmiIndex = Kilograms / (Metres * Metres);
         }
 
-        private class BMIUnit
-        {
-            internal static readonly BMIUnit Imperial;
-            internal static readonly BMIUnit NoUnit;
-            internal static BMIUnit Metric;
-        }
+       
+       
     }
 }
 
